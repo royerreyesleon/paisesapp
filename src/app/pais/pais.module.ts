@@ -23,7 +23,9 @@ import { PaisInputComponent } from './components/pais-input/pais-input.component
     PorCapitalComponent,
     PorPaisComponent,
     PorRegionComponent,
-      VerPaisComponent,
+    VerPaisComponent,
+    PaisTablaComponent,
+    PaisInputComponent,
   ],
   imports: [CommonModule, FormsModule, RouterModule],
 })

@@ -10,9 +10,7 @@ export class PaisService {
     
     private apiUrl: string = 'https://restcountries.com/v3.1';
 
-    constructor(private http: HttpClient) {
-
-    }
+    constructor(private http: HttpClient) {}
     
     buscarPais(termino: string): Observable<Country[]>{
         const url = `${this.apiUrl}/name/${termino}`;
@@ -20,5 +18,15 @@ export class PaisService {
             // .pipe(
             //     catchError(err => of([])),
             // );
+    }
+    
+    buscarCapital(termino: string): Observable<Country[]>{
+        const url = `${this.apiUrl}/capital/${termino}`;
+        return this.http.get<Country[]>(url)
+    }
+    
+    getPaisPorAlpha(id: string): Observable<Country[]>{
+        const url = `${this.apiUrl}/alpha/${id}`;
+        return this.http.get<Country[]>(url)
     }
 }
