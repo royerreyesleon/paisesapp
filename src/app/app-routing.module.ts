@@ -5,6 +5,7 @@ import { PorPaisComponent } from './pais/pages/por-pais/por-pais.component';
 import { PorRegionComponent } from './pais/pages/por-region/por-region.component';
 import { PorCapitalComponent } from './pais/pages/por-capital/por-capital.component';
 import { VerPaisComponent } from './pais/pages/ver-pais/ver-pais.component';
+import { APP_BASE_HREF } from '@angular/common';
 
 const routes: Routes = [
     {
@@ -30,10 +31,16 @@ const routes: Routes = [
     }
 ];
 
+/*
 @NgModule({
-    imports: [RouterModule.forRoot(routes, {
-        useHash: true
-    })],
+    imports: [RouterModule.forRoot(routes)],
     exports: [RouterModule]
+})
+*/
+
+@NgModule({
+    imports: [RouterModule.forRoot(routes, {useHash: true, relativeLinkResolution:'legacy'})],
+    exports: [RouterModule],
+    providers: [{provide: APP_BASE_HREF, useValue: '/'}]
 })
 export class AppRoutingModule { }
