@@ -9,24 +9,27 @@ import { VerPaisComponent } from './pages/ver-pais/ver-pais.component';
 import { RouterModule } from '@angular/router';
 import { PaisTablaComponent } from './components/pais-tabla/pais-tabla.component';
 import { PaisInputComponent } from './components/pais-input/pais-input.component';
+import { PaisSugerenciasComponent } from './components/pais-sugerencias/pais-sugerencias.component';
 
 @NgModule({
-  declarations: [
-    PorCapitalComponent,
-    PorPaisComponent,
-    PorRegionComponent,
-    VerPaisComponent,
-    PaisTablaComponent,
-    PaisInputComponent,
-  ],
-  exports: [
-    PorCapitalComponent,
-    PorPaisComponent,
-    PorRegionComponent,
-    VerPaisComponent,
-    PaisTablaComponent,
-    PaisInputComponent,
-  ],
-  imports: [CommonModule, FormsModule, RouterModule],
+    declarations: [
+        PorCapitalComponent,
+        PorPaisComponent,
+        PorRegionComponent,
+        VerPaisComponent,
+        PaisTablaComponent,
+        PaisInputComponent,
+        PaisSugerenciasComponent,
+    ],
+    exports: [
+        PorCapitalComponent,
+        PorPaisComponent,
+        PorRegionComponent,
+        VerPaisComponent,
+        PaisTablaComponent,
+        PaisInputComponent,
+        PaisSugerenciasComponent,
+    ],
+    imports: [CommonModule, FormsModule, RouterModule],
 })
-export class PaisModule {}
+export class PaisModule { }

@@ -7,9 +7,17 @@
             <app-pais-input
                 (onEnter)="buscar($event)"
                 placeholder="Buscar capital"
+                (onDebounce)="sugerencias($event)"
             ></app-pais-input>
         </div>
     </div>
+
+    <app-pais-sugerencias
+        [mostrarSugerencias]="mostrarSugerencias"
+        [paisesSugeridos]="paisesSugeridos"
+        [termino]="termino"
+        (onClickBuscarTermino)="buscarSugerido($event)">
+    </app-pais-sugerencias>
 
     <hr>
 </div>

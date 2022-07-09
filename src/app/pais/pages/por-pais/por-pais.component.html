@@ -12,7 +12,7 @@
         </div>
     </div>
 
-    <ul *ngIf="mostrarSugerencias" class="list-group">
+    <!-- <ul *ngIf="mostrarSugerencias" class="list-group">
         <li
             class="list-group-item list-group-item-action"
             (click)="buscarSugerido(termino)"
@@ -31,7 +31,14 @@
             {{pais.name.common }}
             </a>
         </li>
-    </ul>
+    </ul> -->
+
+    <app-pais-sugerencias
+        [mostrarSugerencias]="mostrarSugerencias"
+        [paisesSugeridos]="paisesSugeridos"
+        [termino]="termino"
+        (onClickBuscarTermino)="buscarSugerido($event)">
+    </app-pais-sugerencias>
 
     <hr>
 </div>
